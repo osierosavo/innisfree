@@ -27,17 +27,20 @@ header{
   align-items: center;
   justify-content: space-around;
 }
-
+header .menu{cursor: pointer;}
 .language {display: none;}
 .gnb{display: none;}
-
+header .search {cursor: pointer;}
 .mSearch{
   width: 100vw; height: 100px;
   position: absolute;
   top: 60px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-around;
+}
+.mSearch.active{
+  display: flex;
 }
 .mSearch input{
   width: 280px; height: 10px;
@@ -53,6 +56,7 @@ header{
   text-align: center;
   background-color: #333;
   color: #eee;
+  cursor: pointer;
 }
 
 .navigation {
@@ -73,6 +77,7 @@ header{
 .navigation_top>img{
   width: auto; height: 24px;
 }
+.navigation_top .close{cursor: pointer;}
 .navigation .navi_title{
   width: calc(100% - 60px);
   margin: 0 auto;
@@ -152,3 +157,4 @@ header{
 .mLanguagePage{
   display: none;
 }
+

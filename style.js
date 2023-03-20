@@ -23,3 +23,9 @@ for (let i = 0; i < naviTitle.length; i++) {
   });
 };
 
+const mSearchBtn = document.querySelector("header .search");
+const mSearch = document.querySelector(".mSearch");
+
+mSearchBtn.addEventListener('click', function(){
+  mSearch.classList.toggle('active');
+});
