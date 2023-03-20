@@ -1,0 +1,157 @@
+*{margin: 0; padding: 0;}
+img{
+  display: block;
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 black);
+  filter: opacity(.5) drop-shadow(0 0 0 black);
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+li{list-style: none;}
+.material-icons{
+  font-size: 36px;
+}
+
+/*--------------------mobile----------------*/
+
+.wrap{
+  min-width: 360px; height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+header{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.language {display: none;}
+.gnb{display: none;}
+
+.mSearch{
+  width: 100vw; height: 50px;
+  background-color: pink;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mSearch input{
+  width: 280px; height: 10px;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+.searchBtn{
+  display: block;
+  width: 30px; height: 10px;
+  line-height: 30px;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: #eee;
+}
+
+.navigation {
+  background-color: white;
+  width: 100vw; height: 100vh;
+  position: absolute;
+  top: 0; left: -100%; /**메뉴**/
+  transition: all .3s;
+}
+.navigation_top {
+  display: flex;
+  width: calc(100% - 60px); height: 80px;
+  margin: 0 auto 30px;
+  border-bottom: 1px solid #999;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation_top>img{
+  width: auto; height: 24px;
+}
+.navigation .navi_title{
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  line-height: 52px;
+}
+.navi_title .button{
+  display: block;
+  width: 22px; height: 22px;
+  position: relative;
+}
+.bar{
+  width: 22px; height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.bar.active{
+  transform: rotate(0);
+}
+.bar::before{
+  display: block;
+  content: '';
+  width: 22px; height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.navigation li {
+  margin: 10px 0;
+}
+.navigation .navi_contents{
+  font-size: 18px;
+  line-height: 32px;
+  background-color: #eee;
+  width: 100vw; height: auto;
+  display: none;
+  transition: all 1s;
+}
+.navigation .nav.active .navi_contents{
+  display: block;
+}
+.navigation .navi_contents li a{
+  display: block;
+  width: 100vw; height: 100%;
+  padding-left: 28px;
+  line-height: 36px;
+}
+
+.mMenuBottom{
+  width: 100vw; height: 500px;
+  color: #eee; background-color: #333;
+  position: absolute;
+  font-size: 18px;
+}
+.util{
+  width: 100%; height: auto;
+  border-bottom: 1px solid #444;
+}
+.util>div{
+  padding: 30px 30px;
+}
+.mLanguage{
+  margin: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.mLanguage .button{
+  position: absolute;
+}
+.mLanguagePage{
+  display: none;
+}
