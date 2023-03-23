@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innisfree</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
   <link rel="stylesheet" href="/style.css">
   <script defer src="/style.js"></script>
 </head>
@@ -98,11 +101,40 @@
 
       </ul>
     </div><!-- navigation -->
-    <div class="swiper-container">
-      <div class="swiper-slide"><a href="javascript:void(0)">1</a></div>
-      <div class="swiper-slide"><a href="javascript:void(0)">1</a></div>
-      <div class="swiper-slide"><a href="javascript:void(0)">1</a></div>
-    </div>
+   
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"><a href="javascript:void(0)">Slide1</a></div>
+        <div class="swiper-slide slide2"><a href="javascript:void(0)">Slide2</a></div>
+        <div class="swiper-slide slide3"><a href="javascript:void(0)">Slide3</a></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
+      <div class="swiper-scrollbar"></div>
+    </div><!-- mySwiper -->
+
+    
+    <div class="swiper-container bestSeller">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"><a href="javascript:void(0)">Slide1</a></div>
+        <div class="swiper-slide slide2"><a href="javascript:void(0)">Slide2</a></div>
+        <div class="swiper-slide slide3"><a href="javascript:void(0)">Slide3</a></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
+      <div class="swiper-scrollbar"></div>
+    </div><!-- bestSeller -->
+
+
   </div><!-- wrap -->
+
+
+  
 </body>
 </html>
