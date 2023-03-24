@@ -11,13 +11,15 @@ li{list-style: none;}
   font-size: 36px;
 }
 
-/*--------------------mobile----------------*/
+/*****************************mobile******************/
 
 .wrap{
   min-width: 360px; height: 100vh;
   position: relative;
   margin: 0 auto;
 }
+
+/* mobile Header */
 
 header{
   position: absolute;
@@ -28,10 +30,20 @@ header{
   justify-content: space-around;
   z-index: 100;
 }
+header.white{
+  background-color: white;
+}
+
 header .menu{cursor: pointer;}
+
 .language {display: none;}
+
+.mainLogo img{height: 36px;}
+
 .gnb{display: none;}
+
 header .search {cursor: pointer;}
+
 .mSearch{
   width: 100vw; height: 100px;
   position: absolute;
@@ -39,7 +51,9 @@ header .search {cursor: pointer;}
   display: none;
   align-items: center;
   justify-content: space-around;
+  background-color: #fff;
 }
+
 .mSearch.active{
   display: flex;
   z-index: 100;
@@ -66,8 +80,8 @@ header .search {cursor: pointer;}
   width: 100vw; height: 100vh;
   position: absolute;
   top: 0; left: -100%; /**메뉴**/
-  transition: all .3s;
   z-index: 100;
+  transition: all .5s ease-in-out;
 }
 .navigation_top {
   display: flex;
@@ -123,7 +137,6 @@ header .search {cursor: pointer;}
   background-color: #eee;
   width: 100vw; height: auto;
   display: none;
-  transition: all 1s;
 }
 .navigation .nav.active .navi_contents{
   display: block;
@@ -134,7 +147,6 @@ header .search {cursor: pointer;}
   padding-left: 28px;
   line-height: 36px;
 }
-
 .mMenuBottom{
   width: 100vw; height: 500px;
   color: #eee; background-color: #333;
@@ -162,27 +174,44 @@ header .search {cursor: pointer;}
 }
 
 /***mobile slide****/
-.swiper-container {
-  width: 100vw;
-  height: 100vh;
+.mainSlide{
+  width: 100vw; height: 100vh;
 }
-
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
+.mainSlide .swiper-container{
+  width: 100vw; height: 100vh;
+}
+.mainSlide .swiper-wrapper{
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.swiper-slide img {
+.mainSlide .swiper-slide a{
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; height: 100%;
+  position: relative;
+}
+.mainSlide .swiper-slide a img{
+  position: absolute;
+  bottom: 0; right: 0;
 }
 
-.slide1{background-color: blue;}
-.slide2{background-color: aliceblue;}
-.slide3{background-color: beige;}
+
+
+/* best */
+.best{
+  width: 100vw; height: 100vh;
+  background: pink ;
+  background-image: url(/img/bestSeller.jpg);
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+  position: relative;
+}
+.bestWrap{
+  position: absolute;
+  bottom: 36px; left: 36px;
+}
+.best h2{padding: 10px 0;}
+.best p {padding: 20px 0;}
+.best button{
+  width: 50vw; height: 50px;
+  background-color: #fff;
+  border: 1px solid #333;
+}

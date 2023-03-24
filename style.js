@@ -1,3 +1,4 @@
+const header = document.querySelector("header");
 const mMenuBtn = document.querySelector("header .menu");
 const mMenuCloseBtn = document.querySelector(".navigation .close");
 const mMenu = document.querySelector(".navigation");
@@ -28,9 +29,10 @@ const mSearch = document.querySelector(".mSearch");
 
 mSearchBtn.addEventListener('click', function(){
   mSearch.classList.toggle('active');
+  header.classList.toggle('white');
 });
 
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mainSlide .swiper-container", {
   slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
@@ -39,14 +41,14 @@ const swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".mainSlide .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".mainSlide .swiper-button-next",
+    prevEl: ".mainSlide .swiper-button-prev",
   },
   scrollbar: {
-    el: ".swiper-scrollbar",
+    el: ".mainSlide .swiper-scrollbar",
   },
 });
