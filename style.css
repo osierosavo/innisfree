@@ -175,43 +175,105 @@ header .search {cursor: pointer;}
 
 /***mobile slide****/
 .mainSlide{
-  width: 100vw; height: 100vh;
+  width: 100vw;
 }
-.mainSlide .swiper-container{
-  width: 100vw; height: 100vh;
-}
-.mainSlide .swiper-wrapper{
+.mainSlide .slides{
   display: flex;
-}
-.mainSlide .swiper-slide a{
-  display: block;
-  width: 100%; height: 100%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
   position: relative;
 }
-.mainSlide .swiper-slide a img{
-  position: absolute;
-  bottom: 0; right: 0;
+.mainSlide .slides .slide{
+  width: 100vw;
+  position: relative;
+  flex-shrink: 0;
+  transition: left .15s;
 }
-
-
-
+.mainSlide .slides .slide img{
+  width: 100vw;
+}
+.mainSlide .slide-button{
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  font-size: 36px;
+  cursor: pointer;
+}
+.mainSlide .slide-button-prev{
+  left: 30px;
+}
+.mainSlide .slide-button-next{
+  right: 30px;
+}
+.mainSlide .slide-pagination{
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+.mainSlide .slide-pagination > li{
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  font-size: 24px;
+}
+.mainSlide .slide-pagination > li.active{
+  color: rgb(255, 255, 255);
+}
+.slide-duplicate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  transition: left 0.15s;
+}
 /* best */
 .best{
-  width: 100vw; height: 100vh;
-  background: pink ;
-  background-image: url(/img/bestSeller.jpg);
-  background-repeat: no-repeat;
-  background-position: 75% 50%;
+  width: 100vw; height: 100%;
+  background: url(/img/mBestSeller.jpg) no-repeat;
   position: relative;
 }
-.bestWrap{
+.bestImg{
+  width: 100vw;
   position: absolute;
-  bottom: 36px; left: 36px;
+  top: 0; left: 0;
 }
-.best h2{padding: 10px 0;}
+.bestTxt{
+  position: absolute;
+  top: 72px; left: 36px;
+}
 .best p {padding: 20px 0;}
 .best button{
   width: 50vw; height: 50px;
   background-color: #fff;
   border: 1px solid #333;
 }
+
+/* season */
+.season{
+  width: 100vw; 
+  background-color: pink;
+}
+.season h2{
+  text-align: center;
+  padding: 20px;
+}
+.seasonMain{
+  width: 100vw;
+}
+.seasonMain>img{
+  width: 100vw;
+}
+.seasonMainTxt{
+  text-align: center;
+  margin-top: 20px;
+}
+.seasonMainTxt h3{padding: 10px 0;}
+.seasonItem1{
+  width: calc(100vw - 30px);
+}
+.campaignNstore{display: none;}
+footer{display: none;}
