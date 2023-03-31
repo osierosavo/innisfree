@@ -32,27 +32,7 @@ mSearchBtn.addEventListener('click', function(){
   header.classList.toggle('white');
 });
 
-// const swiper = new Swiper(".slide .swiper-container", {
-//   slidesPerView: 1,
-//   spaceBetween: 30,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".slide .swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".slide .swiper-button-next",
-//     prevEl: ".slide .swiper-button-prev",
-//   },
-//   scrollbar: {
-//     el: ".slide .swiper-scrollbar",
-//   },
-// });
-
+////////메인 슬라이드
 
 //슬라이드 전체 width 길이
 const slide = document.querySelector(".slides");
@@ -66,18 +46,18 @@ let slideItems = document.querySelectorAll(".slide");
 const maxSlide = slideItems.length;
 
 //버튼 클릭 시 현재 슬라이드가 몇번째인지
-let curSlide = 1;
+let currSlide = 1;
 
 //pagination
 const pagination = document.querySelector(".slide-pagination");
 
-for (let i = 0; i < slide; i++){
-  if (let i === 0) {
-    pagination.innerHTML += `<li class = "active"></li>`
+for (let i = 0; i < slideItems.length; i++) {
+  if (i === 0) {
+    pagination.innerHTML += `<li class="active"></li>`;
   } else {
     pagination.innerHTML += `<li></li>`;
-  };
-};
+  }
+}
 
 const paginationItems = document.querySelectorAll(".slide-pagination > li");
 
@@ -262,3 +242,6 @@ slide.addEventListener("mouseout", () => {
     nextMove();
   }, 3000);
 });
+
+
+
