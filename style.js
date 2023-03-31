@@ -244,4 +244,36 @@ slide.addEventListener("mouseout", () => {
 });
 
 
+///new swiper
+const swiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+var pauseButton = document.querySelector('.swiper-button-pause');
+
+pauseButton.addEventListener('click', function() {
+  if (mySwiper.autoplay.running) {
+    mySwiper.autoplay.stop();
+    pauseButton.innerHTML = 'Play';
+  } else {
+    mySwiper.autoplay.start();
+    pauseButton.innerHTML = 'Pause';
+  }
+});
+
 
