@@ -113,7 +113,7 @@ function nextMove() {
       // 각 슬라이드 아이템의 left에 offset 적용
       slideItems.forEach((i) => {
         // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+        i.setAttribute("style", `transition: ${0.8}s; left: ${-offset}px`);
       });
     }, 0);
     // // 슬라이드 이동 시 현재 활성화된 pagination 변경
@@ -229,7 +229,7 @@ slide.addEventListener("touchend", (e) => {
 // 기본적으로 슬라이드 루프 시작하기
 let loopInterval = setInterval(() => {
   nextMove();
-}, 3000);
+}, 5000);
 
 // 슬라이드에 마우스가 올라간 경우 루프 멈추기
 slide.addEventListener("mouseover", () => {
@@ -242,6 +242,7 @@ slide.addEventListener("mouseout", () => {
     nextMove();
   }, 3000);
 });
+
 
 
 ///new swiper

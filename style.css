@@ -1,4 +1,9 @@
-*{margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0; padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 img{
   display: block;
 }
@@ -191,7 +196,7 @@ header .search {cursor: pointer;}
   width: 100vw;
   position: relative;
   flex-shrink: 0;
-  transition: left .15s;
+  transition: left .8s;
 }
 .mainSlide .slides .slide img{
   width: 100vw;
@@ -379,5 +384,5 @@ header .search {cursor: pointer;}
 
 /* footer */
 footer{
-  display: none;
+  
 }
