@@ -314,6 +314,7 @@ header .search {cursor: pointer;}
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .season ul li {
   width: calc(100vw - 40px); 
@@ -335,9 +336,6 @@ header .search {cursor: pointer;}
   margin-top: 30px;
   border: 1px solid #bbb;
 }
-.seasonItem{
-  margin-right: 10px;
-}
 .season li:not(.seasonMain) img{
   width: 100%
 }
@@ -348,11 +346,38 @@ header .search {cursor: pointer;}
 .seasonPrice{
   font-size: 14px;
   font-weight: border;
-  padding-top: 20px;
+  padding: 20px 0;
+}
+
+/* storeNcam */
+.storeNcam{
+  width: calc(100vw - 40px);
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.storeNcam img{
+  width: 100%;
+}
+.storeNcam h3{
+  padding-top: 30px;
+}
+.storeNcam button{
+  width: 100px; height: 30px;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  color: #aaa;
+  margin: 10px 0;
+}
+.campaign{
+  margin-top: 50px;
 }
 
 
-/* campaigNstore */
-.campaignNstore{display: none;}
+
 /* footer */
-footer{display: none;}
+footer{
+  display: none;
+}
